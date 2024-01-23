@@ -1,0 +1,36 @@
+svg.nav-item.iconsvg {
+    --color-faketrans: #f5f5f5;
+
+    stroke-width: 7%;
+    stroke: black;
+    fill: var(--color-faketrans);
+
+    .selected>&{
+        &>path:nth-child(1){
+            stroke: #07c160;
+            fill: #07c160;
+        }
+
+        &>path:nth-child(2){
+            stroke: var(--color-faketrans);
+            fill: var(--color-faketrans);
+        }
+    }
+}
+
+
+#nav {
+    --navicon-scale-rate: 0.2;
+}
+#nav-chat>svg{
+    width: calc(100px * var(--navicon-scale-rate));
+}
+#nav-contact>svg{
+    width: calc(120px * var(--navicon-scale-rate));
+}
+#nav-discover>svg{
+    width: calc(100px * var(--navicon-scale-rate));
+}
+#nav-me>svg{
+    width: calc(100px * var(--navicon-scale-rate));
+}
