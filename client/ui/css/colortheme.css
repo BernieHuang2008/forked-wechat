@@ -1,0 +1,11 @@
+html {
+    --color-bg-0: #10110e;
+    --color-bg-1: #1d1e1b;
+    --color-bg-2: #181916;
+    --color-bg-3: #232321;
+    --color-focused-2: #232321;
+    --color-focused-3: #393937;
+
+    --color-text-0: #fff;
+    --color-text-1: #e0e0de;
+}

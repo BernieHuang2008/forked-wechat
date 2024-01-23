@@ -6,33 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Suggested Screen Size: 430x932 (iPhone 14 Pro Max) -->
 
+    <link rel="stylesheet" href="css/colortheme.css">
     <link rel="stylesheet" href="css/initpage.css">
     <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
+    <!-- Pages -->
     <div id="page-chat" class="page selected"></div>
-    <div id="page-contact" class="page"></div>
+    <div id="page-contacts" class="page"></div>
     <div id="page-discover" class="page"></div>
     <div id="page-me" class="page"></div>
 
-    <!-- navigator menu -->
+    <!-- Navigator Menu -->
     <div id="nav">
-        <div id="nav-chat" class="nav-item icondiv selected">
+        <div id="nav-chat" class="nav-item icondiv selected" onclick="GLOBAL.method.switchTab('chat')">
             <svg class="nav-item iconsvg" viewBox="0 0 1024 1024"><path d="M512 64c259.2 0 469.333 200.576 469.333 448S771.2 960 512 960a484.48 484.48 0 0 1-232.725-58.88L162.88 951.765a42.667 42.667 0 0 1-58.517-49.002l29.76-125.014C76.629 703.403 42.667 611.477 42.667 512 42.667 264.576 252.8 64 512 64z"></path></svg>
             <span>Chat</span>
         </div>
-        <div id="nav-contact" class="nav-item icondiv">
-            <svg class="nav-item iconsvg" viewBox="0 0 1024 1024"><path d="M409.428572 256C324.662098 256 256 326.336783 256 412.390244 256 498.636977 324.579452 568.780488 409.428572 568.780488 494.2822 568.780488 562.857143 498.639005 562.857143 412.390244 562.857143 326.33475 494.199557 256 409.428572 256ZM699.680381 861.129366 699.680381 829.129366 699.680381 746.202536C699.680381 642.482227 537.468289 576 397.843428 576 258.2168 576 96 642.482242 96 746.202536L96 829.129366 96 861.129366 128 861.129366 667.680381 861.129366 699.680381 861.129366ZM704 512 928 512M768 640 928 640M800 768 928 768"></path></svg>
-            <span>Contact</span>
+        <div id="nav-contacts" class="nav-item icondiv" onclick="GLOBAL.method.switchTab('contacts')">
+            <svg class="nav-item iconsvg" viewBox="0 0 1024 1024"><path d="m419.40072,188.7358c-97.66907,0 -176.78247,79.993 -176.78247,177.86036c0,98.08717 79.01817,177.86037 176.78247,177.86037c97.7695,0 176.78247,-79.7709 176.78247,-177.86037c0,-97.86966 -79.10819,-177.86036 -176.78247,-177.86036zm334.43205,688.20488l0,-36.39314l0,-94.31148c0,-117.95961 -186.90296,-193.56889 -347.78061,-193.56889c-160.87969,0 -347.78807,75.60929 -347.78807,193.56889l0,94.31148l0,36.39314l36.87083,0l621.82702,0l36.87083,0zm4.97712,-397.05978l258.09582,0m-184.35416,145.57255l184.35416,0m-147.48333,145.57255l147.48333,0"></path></svg>
+            <span>Contacts</span>
         </div>
-        <div id="nav-discover" class="nav-item icondiv">
+        <div id="nav-discover" class="nav-item icondiv" onclick="GLOBAL.method.switchTab('discover')">
             <svg class="nav-item iconsvg" viewBox="0 0 1024 1024"><path d="M510.726342 57.121977c-257.129168 0-465.581036 208.451868-465.581036 465.581035s208.451868 465.581036 465.581036 465.581036 465.581036-208.451868 465.581035-465.581036-208.451868-465.581036-465.581035-465.581035z m0 856.240985"></path><path d="m715.5,317.8l-143.5,266.2l-266,144l143,-267z"></path></svg>
             <span>Discover</span>
         </div>
-        <div id="nav-me" class="nav-item icondiv">
+        <div id="nav-me" class="nav-item icondiv" onclick="GLOBAL.method.switchTab('me')">
             <svg class="nav-item iconsvg" viewBox="0 0 1024 1024"><path d="m-92.032 435.712M408.746667 597.333333c0.042667-0.490667 0-0.704-0.085334-0.746666L112.490667 736.128l-4.736 2.389333c-33.834667 18.517333-54.421333 53.162667-54.421334 90.88v10.752l0.128 4.522667C56.384 891.84 94.72 928 141.184 928h741.632a87.850667 87.850667 0 0 0 87.850667-87.850667v-10.752a103.104 103.104 0 0 0-59.157334-93.269333L615.701333 596.693333a1.024 1.024 0 0 1-0.597333-0.938666v-6.016c0-0.96 0.384-1.877333 1.066667-2.56l42.794666-42.005334a209.770667 209.770667 0 0 0 62.805334-149.674666v-96.469334A203.050667 203.050667 0 0 0 518.72 96h-13.44l-5.824 0.085333c-109.973333 3.370667-197.226667 93.184-197.226667 202.965334v96.469333l0.106667 7.061333a210.112 210.112 0 0 0 62.698667 142.613334l42.794666 42.026666 1.28 1.472c-0.512-0.576-0.213333 0.213333-0.213333 1.066667v6.016z"></path></svg>
             <span>Me</span>
         </div>
     </div>
 </body>
+
+<script src="js/sel.js"></script>
+<script src="js/switchTab.js"></script>
+<script src="js/global.js"></script>
+
 </html>

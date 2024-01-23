@@ -1,36 +1,56 @@
-svg.nav-item.iconsvg {
-    --color-faketrans: #f5f5f5;
+#nav {
+    height: 50px;
+    padding: 7.5px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
 
-    stroke-width: 7%;
-    stroke: black;
+    background: var(--color-bg-1);
+
+    &::before,
+    &::after {
+        content: "";
+        z-index: -1;
+    }
+}
+
+#nav>div.nav-item {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    color: var(--color-text-1);
+    font-weight: 500;
+
+    &.selected>* {
+        color: #07c160;
+    }
+}
+
+svg.nav-item.iconsvg {
+    --color-faketrans: var(--color-bg-1);
+
+    width: 30px;
+    height: 30px;
+
+    stroke-width: 5%;
+    stroke: var(--color-text-1);
     fill: var(--color-faketrans);
 
-    .selected>&{
-        &>path:nth-child(1){
+    .selected>& {
+        &>path:nth-child(1) {
             stroke: #07c160;
             fill: #07c160;
         }
 
-        &>path:nth-child(2){
+        &>path:nth-child(2) {
             stroke: var(--color-faketrans);
             fill: var(--color-faketrans);
         }
     }
-}
-
-
-#nav {
-    --navicon-scale-rate: 0.2;
-}
-#nav-chat>svg{
-    width: calc(100px * var(--navicon-scale-rate));
-}
-#nav-contact>svg{
-    width: calc(120px * var(--navicon-scale-rate));
-}
-#nav-discover>svg{
-    width: calc(100px * var(--navicon-scale-rate));
-}
-#nav-me>svg{
-    width: calc(100px * var(--navicon-scale-rate));
 }
